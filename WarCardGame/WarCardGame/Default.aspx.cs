@@ -9,13 +9,13 @@ namespace WarCardGame
 
         }
 
-        protected void okButton_Click(object sender, EventArgs e)
+        protected void OkButton_Click(object sender, EventArgs e)
         {
             Deck deck = new Deck();
 
             Player player = new Player();
 
-            deck.dealAllCards();
+            deck.DealAllCards();
 
             foreach (var pl in deck.PlayerOne.Card)
             {

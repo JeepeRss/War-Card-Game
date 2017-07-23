@@ -30,7 +30,7 @@ namespace WarCardGame
             }
         }
 
-        public void pickCard(Player player)
+        public void PickCard(Player player)
         {
             int pickedIndex = _random.Next(_deck.Count);
             Card pickedCard = _deck[pickedIndex];
@@ -38,12 +38,12 @@ namespace WarCardGame
             _deck.RemoveAt(pickedIndex);   
         }
 
-        public void dealAllCards()
+        public void DealAllCards()
         {
             while (_deck.Count > 0)
             {
-                pickCard(PlayerOne);
-                pickCard(PlayerTwo);
+                PickCard(PlayerOne);
+                PickCard(PlayerTwo);
             }
         }
     }
