@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WarCardGame
 {
@@ -11,6 +6,26 @@ namespace WarCardGame
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected void okButton_Click(object sender, EventArgs e)
+        {
+            Deck deck = new Deck();
+
+            Player player = new Player();
+
+            deck.dealAllCards();
+
+            foreach (var pl in deck.PlayerOne.Card)
+            {
+                resultLabel.Text += string.Format("<br/>Player one {0} {1}", pl.Kind, pl.Value);
+            }
+
+            foreach (var pl2 in deck.PlayerTwo.Card)
+            {
+                resultLabel.Text += string.Format("<br/>Player two {0} {1}", pl2.Kind, pl2.Value);
+            }
 
         }
     }
