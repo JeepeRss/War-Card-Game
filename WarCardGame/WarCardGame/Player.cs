@@ -10,7 +10,7 @@ namespace WarCardGame
 
         public Player()
         {
-            Card = new List<WarCardGame.Card>();
+            Card = new List<Card>();
         }
     }
 }

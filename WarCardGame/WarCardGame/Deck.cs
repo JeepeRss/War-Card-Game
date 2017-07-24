@@ -5,18 +5,18 @@ namespace WarCardGame
 {
     public class Deck
     {
-        public List<Card> _deck { get; set; }
-        public Player PlayerOne { get; set; }
-        public Player PlayerTwo { get; set; }
+        private List<Card> _deck { get; set; }
         private Random _random { get; set; }
+
+        public List<Card> ShuffleDeck { get; set; }
+        
 
         public Deck()
         {
             _deck = new List<Card>();
             _random = new Random();
-            PlayerOne = new Player();
-            PlayerTwo = new Player();
-         
+            ShuffleDeck = new List<Card>();
+
             string[] kinds = new[] { "Clubs", "Hearts", "Diamonds", "Spades" };
             string[] values = new[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Dolek", "Queen", "King", "Ace" };
 
@@ -28,22 +28,19 @@ namespace WarCardGame
                     _deck.Add(card);
                 }
             }
+
+            shuffleCards();
         }
 
-        public void PickCard(Player player)
-        {
-            int pickedIndex = _random.Next(_deck.Count);
-            Card pickedCard = _deck[pickedIndex];
-            player.Card.Add(pickedCard);
-            _deck.RemoveAt(pickedIndex);   
-        }
-
-        public void DealAllCards()
+        private void shuffleCards()
         {
             while (_deck.Count > 0)
             {
-                PickCard(PlayerOne);
-                PickCard(PlayerTwo);
+                
+                int shuffleIndex = _random.Next(_deck.Count);
+                Card pickedCard = _deck[shuffleIndex];
+                ShuffleDeck.Add(pickedCard);
+                _deck.RemoveAt(shuffleIndex);
             }
         }
     }
