@@ -10,7 +10,8 @@ namespace WarCardGame
 
         public Player()
         {
-            Card = new List<Card>();
+            this.Card = new List<Card>();
+            
         }
     }
 }

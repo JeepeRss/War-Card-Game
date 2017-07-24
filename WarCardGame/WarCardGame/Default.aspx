@@ -12,7 +12,9 @@
             <asp:Button ID="okButton" runat="server" Text="Button" OnClick="OkButton_Click" />
             <br />
             <br />
+            <asp:Label ID="dealLabel" runat="server" Text=""></asp:Label>
             <asp:Label ID="resultLabel" runat="server" Text=""></asp:Label>
+
         </div>
     </form>
 </body>

@@ -12,9 +12,10 @@ namespace WarCardGame
         protected void OkButton_Click(object sender, EventArgs e)
         {
             Game game = new Game("Jozef", "Miro");
+            Battle battle = new Battle();
 
-            resultLabel.Text = game.playGame();
-
+            dealLabel.Text = game.DealCards();
+            resultLabel.Text = game.PlayGame();
         }
     }
 }

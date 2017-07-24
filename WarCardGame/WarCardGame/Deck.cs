@@ -8,6 +8,7 @@ namespace WarCardGame
         private List<Card> _deck { get; set; }
         private Random _random { get; set; }
 
+
         public List<Card> ShuffleDeck { get; set; }
         
 
@@ -18,7 +19,7 @@ namespace WarCardGame
             ShuffleDeck = new List<Card>();
 
             string[] kinds = new[] { "Clubs", "Hearts", "Diamonds", "Spades" };
-            string[] values = new[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Dolek", "Queen", "King", "Ace" };
+            string[] values = new[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
 
             foreach (var kind in kinds)
             {
@@ -36,7 +37,6 @@ namespace WarCardGame
         {
             while (_deck.Count > 0)
             {
-                
                 int shuffleIndex = _random.Next(_deck.Count);
                 Card pickedCard = _deck[shuffleIndex];
                 ShuffleDeck.Add(pickedCard);
