@@ -1,7 +1,7 @@
 # War-Card-Game
 Challenge from www.devu.com
 
-#Game Rules
+# Game Rules
 The objective of the game is to win all cards.
 
 The deck is divided evenly among the players, giving each a down stack. In unison, each player reveals the top card of their deck – this is a "battle" – and the player with the higher card takes both of the cards played and moves them to their stack. Aces are high, and suits are ignored.[1]
